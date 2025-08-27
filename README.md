@@ -1,4 +1,6 @@
-# このリポジトリについて
+# Web Scraping
+
+## 概要
 
 このリポジトリはウェブサイトから情報を収集するために利用するスクレイピングツールです
 
@@ -125,19 +127,19 @@ python3 ./src/github-scraping.py --user octocat --match sample --pull-if-exists
 
 ```bash
 # 基本的な使用方法
-python src/arxiv-scraping.py "machine learning transformer"
+uv run python src/arxiv-scraping.py "machine learning transformer"
 
 # 最大5件の論文をダウンロード
-python src/arxiv-scraping.py "deep learning" --max-results 5
+uv run python src/arxiv-scraping.py "deep learning" --max-results 5
 
 # カスタムディレクトリに保存
-python src/arxiv-scraping.py "neural networks" --output-dir "my_papers"
+uv run python src/arxiv-scraping.py "neural networks" --output-dir "my_papers"
 
 # 最新の論文から順にダウンロード
-python src/arxiv-scraping.py "computer vision" --sort-by lastUpdatedDate
+uv run python src/arxiv-scraping.py "computer vision" --sort-by lastUpdatedDate
 
 # 複数オプションを組み合わせ
-python src/arxiv-scraping.py "natural language processing" -n 15 -o "nlp_papers" --sort-by submittedDate --sort-order ascending
+uv run python src/arxiv-scraping.py "neural networks" --output-dir "my_papers"  --max-results 5
 ```
 
 利用可能な実行オプション
